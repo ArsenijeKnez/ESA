@@ -1,0 +1,34 @@
+{
+  "validUser": {
+    "email": "customer@practicesoftwaretesting.com",
+    "password": "welcome01"
+  },
+  "invalidUser": {
+    "email": "notAuser@email.com",
+    "password": "1234567890"
+  },
+  "newUser": {
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test.user@gmail.com",
+    "password": "Test1234567",
+    "dob": "2000-01-01",
+    "address": "1 Lane",
+    "city": "New York",
+    "state": "NY",
+    "country": "US",
+    "postcode": "10001",
+    "phone": "0123456789"
+  },
+  "searchTerms": {
+    "valid": "Pliers",
+    "invalid": "product1notfound"
+  },
+  "giftCard": {
+    "validNumber": "1234ABCD5678EFGH",
+    "validCode": "CODE1234",
+    "invalidNumber": "RR>?@#$%^&",
+    "invalidCode": "######",
+    "empty": ""
+  }
+}
