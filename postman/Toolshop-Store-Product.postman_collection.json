@@ -31,7 +31,6 @@
           "listen": "test",
           "script": {
             "exec": [
-              "// Assert login succeeded and store token into environment",
               "pm.test('Login response is 2xx', function () {",
               "  pm.expect(pm.response.code).to.be.within(200, 299);",
               "});",
@@ -78,12 +77,9 @@
           "listen": "prerequest",
           "script": {
             "exec": [
-              "// Generate a unique product name for this run",
               "var name = 'Test Product ' + Date.now();",
               "pm.environment.set('productName', name);",
-              "// Also ensure sku template uses the same name if needed",
-              "pm.environment.set('productSku', 'SKU-' + name);",
-              "// Replace the raw body tokens (Postman will substitute {{productName}} automatically)"
+              "pm.environment.set('productSku', 'SKU-' + name);"
             ]
           }
         },
@@ -91,7 +87,6 @@
           "listen": "test",
           "script": {
             "exec": [
-              "// Assert success and response contains created product id and matching name",
               "pm.test('Status is 2xx', function () {",
               "  pm.expect(pm.response.code).to.be.within(200, 299);",
               "});",
